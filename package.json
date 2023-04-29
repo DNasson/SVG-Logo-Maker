@@ -15,12 +15,13 @@
     "url": "git+https://github.com/DNasson/SVG-Logo-Maker.git"
   },
   "author": "DNasson",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/DNasson/SVG-Logo-Maker/issues"
   },
   "homepage": "https://github.com/DNasson/SVG-Logo-Maker#readme",
   "dependencies": {
+    "a-color-picker": "^1.2.1",
     "inquirer": "^8.2.5"
   },
   "devDependencies": {
