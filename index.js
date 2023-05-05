@@ -1,6 +1,38 @@
 const inquirer = require('inquirer');
-const AColorPicker = require('a-color-picker');
+const fs = require('fs');
+const Circle = require('./lib/shapes/Circle');
+const Square = require('./lib/shapes/Square');
+const Triangle = require('./lib/shapes/Triangle');
+const Shape = require('./lib/shapes/ShapeClass');
 
+const generateSVG = ({ text, fontColor, shape, shapeColor }) => {
+    this.shape = shape;
+    this.shapeColor = shapeColor;
+    this.text = text;
+    this.fontColor = fontColor;
+    //console.log(this.shape, this.shapeColor, this.text, this.fontColor);
+    //render()
+    switch (this.shape) {
+        case 'circle':
+            const myCircle = new Circle(this.shapeColor);
+            const myShape = new Shape(myCircle.render(), this.text, this.fontColor);
+            const myShapeOutput = myShape.render();
+            console.log('myShapeOutput is', myShapeOutput);
+            break;
+        case 'square':
+            const mySquare = new Square(this.shapeColor);
+            const myShape = new Shape(mySquare.render(), this.text, this.fontColor);
+            const myShapeOutput = myShape.render();
+            return square(this.shapeColor, this.text, this.fontColor);
+        case 'triangle':
+            const mySquare = new Triangle(this.shapeColor);
+            const myShape = new Shape(mySquare.render(), this.text, this.fontColor);
+            const myShapeOutput = myShape.render();
+            return triangle(this.shapeColor, this.text, this.fontColor);
+        default:
+            return 'Error: Shape not found';
+    }
+}
 
 inquirer
     .prompt([
@@ -11,11 +43,11 @@ inquirer
         },
         {
             type: 'input',
-            message: 'What color would you like for the text?',
-            name: 'text color',
+            message: 'What color would you like your text?',
+            name: 'fontColor',
         },
         {
-            type: 'checkbox',
+            type: 'list',
             message: 'What shape would you like?',
             choices: ['circle', 'square', 'triangle'],
             name: 'shape',
@@ -23,6 +55,13 @@ inquirer
         {
             type: 'input',
             message: 'What color would you like your shape?',
-            name: 'shape color',
+            name: 'shapeColor',
         },
     ])
+    .then((answers) => {
+        const SVG = generateSVG(answers);
+        // fs.writeFile('logo.svg', SVG,
+        //     (err) =>
+        //         err ? console.log(err) : console.log("Generated logo.svg")
+        // );
+    });
