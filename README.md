@@ -31,7 +31,7 @@ I learned how to make an SVG and what that entails. I learned how to make a tria
 
 ## Installation
 
-What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running.
+Go into the repository, click the Green Code button. Download the zip and open it to get to the code in your editor.
 
 ## Usage
 
