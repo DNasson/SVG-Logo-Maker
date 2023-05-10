@@ -13,22 +13,26 @@ const generateSVG = ({ text, fontColor, shape, shapeColor }) => {
   
 
     switch (this.shape) {
-        // case 'circle':
-        //     const myCircle = new Circle(this.shapeColor);
-        //     const myShape = new Shape(myCircle.render(), this.text, this.fontColor);
-        //     const myShapeOutput = myShape.render();
-        //     console.log('The new shape is is', myShapeOutput);
-        //     break;
+        case 'circle':
+            const myCircle = new Circle(this.shapeColor);
+            const myCircleShape = new Shape(myCircle.render(), this.text, this.fontColor);
+            const myCircleOutput = myCircleShape.render();
+            // console.log('The new shape is is', myShapeOutput);
+            return myCircleOutput;
+            break;
         case 'square':
             const mySquare = new Square(this.shapeColor);
-            const myShape = new Shape(mySquare.render(), this.text, this.fontColor);
+            const mySquareShape = new Shape(mySquare.render(), this.text, this.fontColor);
+            const mySquareOutput = mySquareShape.render();
+            // console.log('The new shape is', myShapeOutput);
+            return mySquareOutput;
+            break;
+        case 'triangle':
+            const myTriangle = new Triangle(this.shapeColor);
+            const myShape = new Shape(myTriangle.render(), this.text, this.fontColor);
             const myShapeOutput = myShape.render();
-            console.log('The new shape is', myShapeOutput);
-        // case 'triangle':
-        //     const mySquare = new Square(this.shapeColor);
-        //     const myShape = new Shape(mySquare.render(), this.text, this.fontColor);
-        //     const myShapeOutput = myShape.render();
-        //     return triangle(this.shapeColor, this.text, this.fontColor);
+            return myShapeOutput;
+            break;
         default:
             return 'Error: Shape not found';
     }
