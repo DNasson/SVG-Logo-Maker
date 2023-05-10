@@ -37,6 +37,7 @@ What are the steps required to install your project? Provide a step-by-step desc
 
 When the program is loaded onto a code editor, open an integrated terminal within the project. In the terminal type "node index.js" and the prompts will appear to allow the user to make their choices for letters(3 max), shape and colors of the shape and text. After answering the questions the image will be rendered in a 'logo.svg' file. 
 
+[SVG Logo Generator.webm](https://github.com/DNasson/SVG-Logo-Maker/assets/123035338/60237d69-a831-4428-8e1d-2f24aa9bc963)
 
 ## Credits
 
