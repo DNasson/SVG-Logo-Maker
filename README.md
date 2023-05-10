@@ -38,6 +38,7 @@ Go into the repository, click the Green Code button. Download the zip and open i
 When the program is loaded onto a code editor, open an integrated terminal within the project. In the terminal type "node index.js" and the prompts will appear to allow the user to make their choices for letters(3 max), shape and colors of the shape and text. After answering the questions the image will be rendered in a 'logo.svg' file. 
 
 [SVG Logo Generator.webm](https://github.com/DNasson/SVG-Logo-Maker/assets/123035338/60237d69-a831-4428-8e1d-2f24aa9bc963)
+![D80CAE68-4060-4FBE-86EB-8EF2F7B735D5_4_5005_c](https://github.com/DNasson/SVG-Logo-Maker/assets/123035338/0ed6208b-f287-48fd-8fcc-ca37fde6fde8)
 
 ## Credits
 
